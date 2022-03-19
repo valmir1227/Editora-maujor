@@ -70,8 +70,7 @@ class App extends Component {
                 const livro = this.state.livros.find(
                   //Match -> A match contains information about a <Route path>
                   //metched the URL.
-                  //Paramns -> Key/value pairs parsed from the URL corresponding to the dynamic segments
-                  //of the path.
+                  //Paramns -> Key/value pairs parsed from d
                   (livro) => livro.slug === props.match.params.livroSlug
                 );
 

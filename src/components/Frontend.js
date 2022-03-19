@@ -8,11 +8,13 @@ const Frontend = ({ livros }) => {
       {livros
         .filter((cat) => cat.categoria === "frontend")
         .map((livro) => (
-          <div className="thumb">
-            <img
-              src={"/imagens/capas/" + livro.id + ".jpg"}
-              alt="Thumbmail da capa dop livro..."
-            />
+          <div className="card" key={livro.id}>
+            <div className="thumb">
+              <img
+                src={"/imagens/capas/" + livro.id + ".jpg"}
+                alt="Thumbmail da capa dop livro..."
+              />
+            </div>
             {livros
               .filter((c) => c.slug === livro.slug)
               .map((livro) => (
