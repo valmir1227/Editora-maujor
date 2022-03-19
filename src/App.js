@@ -66,7 +66,12 @@ class App extends Component {
             <Route
               path="/livro/:livroSlug"
               render={(props) => {
+                // Find() -> Retorna o valor do primeiro elemento do array que satisfazer a fun
                 const livro = this.state.livros.find(
+                  //Match -> A match contains information about a <Route path>
+                  //metched the URL.
+                  //Paramns -> Key/value pairs parsed from the URL corresponding to the dynamic segments
+                  //of the path.
                   (livro) => livro.slug === props.match.params.livroSlug
                 );
 

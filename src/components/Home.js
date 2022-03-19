@@ -10,6 +10,8 @@ const Home = ({ livros }) => (
         <div className="card" key={livro.id}>
           <div className="thumb">
             <img
+              //O método replace() retorna uma nova string com algumas ou todas as correspondências
+              // de um padrão substituídas por um determinado caractere (ou caracteres)
               src={"/imagens/capas/" + livro.isbn.replace(/-/g, "") + ".jpg"}
               alt="Thumbmail da capa do livro..."
             />
@@ -26,6 +28,9 @@ const Home = ({ livros }) => (
                   </div>
                 }
               </Link>
+              //O método slice() retorna uma cópia superficial de uma parte de um array em um novo
+              //objeto de array selecionado do início ao fim (fim não incluído) onde start e end
+              //representam o índice de itens naquele array.
             ))}
         </div>
       ))}
